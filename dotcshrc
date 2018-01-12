@@ -1,0 +1,17 @@
+alias ls ls --color=always
+set prompt = '[%n@%m %c]$ '
+
+
+if (! $?STY) then       
+   set prompt = '[%n@%m %c]$ '
+#   echo "not a screen session"
+else
+  if ("$STY" == "")  then
+      echo "variable is empty"
+  else 
+      set mysty=`echo $STY | awk -F\. '{print $2}'`
+      set prompt = "(${mysty}:${WINDOW}):(%~)$ "
+  endif
+endif
+
+setenv LD_LIBRARY_PATH ${PATH}

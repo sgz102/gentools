@@ -1,0 +1,31 @@
+This tar file contains the following tools
+
+#####################################################
+---- Scripts ------
+#####################################################
+-----------------------------------------------------
+## Check to see which processes are running (by the current user)
+## in the background and foreground
+## syntax: ck_bk_files.pl <t>
+## where <t> is an optional argument to see only processes in that terminal
+
+background_jobs/ck_bk_files.pl
+-----------------------------------------------------
+## To get a bunch of general information about your machine
+
+sysinfo/ahsysinfo
+
+-----------------------------------------------------
+## The following gives the username you are using and the machine
+## you are currently logged in on
+
+who_machine/who_machine.bash
+
+
+#####################################################
+---- Non-Executables  ------
+#####################################################
+## A list of commands that may be useful
+
+other_commands
+

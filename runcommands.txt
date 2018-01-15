@@ -1,0 +1,48 @@
+## Alias info for bash (see below for csh)
+
+--------------------------------------------------------------
+### alias commands
+--------------------------------------------------------------
+alias ramfree="cat /proc/meminfo | grep MemFree"
+alias rm="rm -i"
+alias myram="cat /proc/meminfo | grep MemTotal"
+alias ssh="ssh -Y -o ServerAliveInterval=60"
+alias ls="ls --color=tty"
+alias dff="df -Ph | column -t"
+alias vi='vim'
+alias cvssetup='export CVS_SERVER=/usr/bin/cvs; export CVSROOT=:pserver:szonak@daria:/headas ; export CVS_RSH=ssh ; export CVS_EDITOR=/usr/bin/vim; cvs login'
+
+
+--------------------------------------------------------------
+### alias commands that call a script
+--------------------------------------------------------------
+alias whomach="who_machine.bash"
+alias jobbg="ck_bg_files.pl"
+alias smem="smem-1.4/smem"
+
+
+
+############################################
+## alias commands for csh
+############################################
+
+alias ramfree 'cat /proc/meminfo | grep MemFree'
+alias rm 'rm -i'
+alias myram 'cat /proc/meminfo | grep MemTotal'
+alias ssh 'ssh -Y -o ServerAliveInterval=60'
+alias ls 'ls --color=tty'
+alias dff 'df -Ph | column -t'
+
+
+cvssetup='setenv CVS_SERVER '/usr/bin/cvs'; export CVSROOT=:pserver:szonak@daria:/headas ; export CVS_RSH=ssh ; export CVS_EDITOR=/usr/bin/vim; cvs login'
+vi 'vim'
+
+
+--------------------------------------------------------------
+### alias commands that call a script
+--------------------------------------------------------------
+whomach who_machine.bash
+jobbg ck_bg_files.pl
+smem  smem-1.4/smem
+
+

@@ -1,5 +1,9 @@
 #!/usr/bin/perl
 #
+# This script will print the lines you should add
+# to your .bashrc file in order to make
+# my usual aliases for my quick tools
+
 use strict;
 
 use Cwd;

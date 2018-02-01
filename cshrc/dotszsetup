@@ -1,0 +1,30 @@
+## This is a cshell set-up script
+
+## The following sets some things
+## --> checks for screen session
+## --> sets the prompt (depending on whether or not a screen session)
+## --> saves the LD_LIBRARY_PATH to a file if NOT in screen session
+## --> sets the LD_LIBRARY_PATH if in a screen session
+##     --> These last 2 tasks are because of the nature of "screen"
+##     --> (the Linux kernel will remove some environment variables
+##     --> mostly LD* ones)
+
+source ~/.cshrc
+if (! $?STY) then
+   set prompt = '[%n@%m %c]$ '
+   echo $LD_LIBRARY_PATH > /home/szonak/szscreen/tmp_files/startup_env_list
+#   echo "not a screen session"
+else
+  if ("$STY" == "")  then
+      echo "variable is empty"
+  else
+      set mysty=`echo $STY | awk -F\. '{print $2}'`
+      set prompt = "(${mysty}:${WINDOW}):(%~)$ "
+
+     ## Set my environment variables (somem get unset when starting screen)
+     source /home/szonak/szscreen/set_ld_lib_path.csh
+  endif
+endif
+
+## source any other scripts
+#source bleh.csh

@@ -1,0 +1,4 @@
+
+## Part of a .cshrc file to set-up the prompt when using git
+alias gitlog 'git log --oneline --decorate --graph --all'
+alias precmd "source ~/bin/gitprompt.csh"
